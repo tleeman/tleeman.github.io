@@ -39,9 +39,9 @@ nav a:hover { text-decoration: underline; }
 .hero { display: grid; grid-template-columns: 1.12fr 1fr; align-items: center; gap: 28px; padding-block: 80px 90px; }
 .hero-copy > p { max-width: 440px; font-size: 1.125rem; color: var(--muted); }
 h1 em { color: var(--green); }
-.button { display: inline-flex; align-items: center; gap: 30px; padding: 14px 24px; border-radius: 8px; background: var(--green); color: var(--paper); text-decoration: none; font-weight: 600; margin-top: 10px; }
-.button:hover { background: #153c34; }
-.hero-copy .availability { font-size: .9rem; margin: 14px 0 0; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 24px; margin-top: 24px; }
+.store-badge { display: inline-block; width: 220px; max-width: 100%; flex-shrink: 0; }
+.store-badge img { width: 100%; }
 .mascot { width: min(100%, 420px); justify-self: center; }
 .mascot img {
   width: 100%;
@@ -57,6 +57,7 @@ figcaption { text-align: center; font-size: .9rem; color: var(--muted); margin-t
 .section-intro p:last-child { font-size: .95rem; color: #4e6559; }
 .app-story, .reference-story { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
 .app-shot { width: min(100%, 360px); justify-self: center; }
+.app-story .app-shot { justify-self: start; }
 .app-shot img { width: 100%; border-radius: 16px; border: 1px solid var(--line); }
 .story-copy { max-width: 480px; }
 dl { margin: 0; }
@@ -66,6 +67,9 @@ dd { margin: 0; color: #425b4d; }
 .reference-story { margin-top: 90px; padding-top: 72px; border-top: 1px solid #b5c7b9; }
 .reference-story .story-copy { padding-left: 32px; }
 .text-link { display: inline-block; padding-block: 10px; font-weight: 600; }
+.app-download { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding-block: 72px; border-bottom: 1px solid var(--line); }
+.app-download h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 20px; }
+.app-download p { max-width: 56ch; margin: 0; color: var(--muted); }
 .support { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; padding-block: 100px; }
 .support h2 { margin-bottom: 28px; }
 .support p { max-width: 460px; }
@@ -79,6 +83,11 @@ details p { color: var(--muted); padding-right: 16px; }
 .site-footer { border-top: 1px solid var(--line); padding-block: 32px; display: flex; align-items: center; flex-wrap: wrap; gap: 14px 24px; font-size: .85rem; }
 .site-footer p { margin: 0; color: var(--muted); flex: 1; }
 .site-footer .wordmark { font-size: 1.1rem; }
+.policy { max-width: 72ch; padding-block: 64px 80px; }
+.policy h1 { font-size: clamp(2.6rem, 7vw, 4rem); margin-bottom: 16px; }
+.policy h2 { font-size: clamp(1.5rem, 4vw, 1.9rem); line-height: 1.25; margin: 40px 0 16px; }
+.policy a { color: var(--green); overflow-wrap: anywhere; }
+.policy .updated { color: var(--muted); margin-bottom: 32px; }
 @media (max-width: 900px) {
   .wrap { width: calc(100% - 56px); }
   .hero { padding-block: 60px; gap: 16px; }
@@ -98,10 +107,12 @@ details p { color: var(--muted); padding-right: 16px; }
   .app-section { padding-block: 56px; }
   .section-intro, .app-story, .reference-story, .support { grid-template-columns: 1fr; gap: 32px; }
   .section-intro { margin-bottom: 44px; }
-  .app-story .story-copy { grid-row: 1; }
   .app-shot { width: min(100%, 330px); }
+  .app-story .app-shot { justify-self: center; }
   .reference-story { margin-top: 52px; padding-top: 48px; }
+  .app-download { flex-direction: column; align-items: flex-start; gap: 24px; padding-block: 48px; }
   .support { padding-block: 60px; gap: 40px; }
+  .policy { padding-block: 40px 56px; }
   .site-footer { align-items: start; flex-direction: column; gap: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } }
