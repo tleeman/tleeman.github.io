@@ -83,6 +83,7 @@ details p { color: var(--muted); padding-right: 16px; }
 .site-footer { border-top: 1px solid var(--line); padding-block: 32px; display: flex; align-items: center; flex-wrap: wrap; gap: 14px 24px; font-size: .85rem; }
 .site-footer p { margin: 0; color: var(--muted); flex: 1; }
 .site-footer .wordmark { font-size: 1.1rem; }
+.instagram-link { display: inline-flex; align-items: center; gap: 6px; }
 .policy { max-width: 72ch; padding-block: 64px 80px; }
 .policy h1 { font-size: clamp(2.6rem, 7vw, 4rem); margin-bottom: 16px; }
 .policy h2 { font-size: clamp(1.5rem, 4vw, 1.9rem); line-height: 1.25; margin: 40px 0 16px; }
